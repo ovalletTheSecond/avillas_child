@@ -75,7 +75,7 @@ function avillas_render_random_properties() {
                     <a class="avillas-random-properties__image" href="<?php echo esc_url( get_permalink( $property ) ); ?>" tabindex="-1" aria-hidden="true">
                         <?php
                         if ( has_post_thumbnail( $property ) ) {
-                            echo get_the_post_thumbnail( $property, 'medium_large', array( 'alt' => '', 'loading' => 'eager', 'data-no-lazy' => '1', 'sizes' => '(max-width: 600px) calc(100vw - 56px), (max-width: 1260px) 52vw, 638px' ) );
+                            echo get_the_post_thumbnail( $property, 'medium_large', array( 'alt' => '', 'loading' => 'eager', 'data-no-lazy' => '1', 'sizes' => '(max-width: 600px) calc(100vw - 106px), (max-width: 979px) 48vw, 30vw' ) );
                         } else {
                             echo '<span>' . esc_html( $labels['photo'] ) . '</span>';
                         }

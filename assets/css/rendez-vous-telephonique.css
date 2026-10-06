@@ -206,7 +206,7 @@ body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_label {
 
 body.avillas-consultation-page .ipt_fsqm_main_form input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
 body.avillas-consultation-page .ipt_fsqm_main_form select,
-body.avillas-consultation-page .ipt_fsqm_main_form textarea {
+body.avillas-consultation-page .ipt_fsqm_main_form textarea:not(.g-recaptcha-response) {
 	box-sizing: border-box;
 	min-height: 48px;
 	padding: 12px 14px !important;
@@ -219,13 +219,13 @@ body.avillas-consultation-page .ipt_fsqm_main_form textarea {
 	font-size: 15px;
 }
 
-body.avillas-consultation-page .ipt_fsqm_main_form textarea {
+body.avillas-consultation-page .ipt_fsqm_main_form textarea:not(.g-recaptcha-response) {
 	min-height: 120px;
 }
 
 body.avillas-consultation-page .ipt_fsqm_main_form input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]):focus,
 body.avillas-consultation-page .ipt_fsqm_main_form select:focus,
-body.avillas-consultation-page .ipt_fsqm_main_form textarea:focus {
+body.avillas-consultation-page .ipt_fsqm_main_form textarea:not(.g-recaptcha-response):focus {
 	border-color: var(--consultation-red) !important;
 	outline: 2px solid rgba(176, 45, 41, .18);
 	outline-offset: 1px;

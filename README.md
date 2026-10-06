@@ -27,6 +27,12 @@ Spanish, and Catalan labels follow Polylang/WordPress; GTranslate can translate
 the rendered text. Full-page caching retains the random selection until that
 page is regenerated.
 
+On desktop the carousel is centered at 60% width and no more than 250px tall.
+Previous/next arrows sit on either side, and the native horizontal scrollbar
+is hidden without disabling touch scrolling. Mobile uses a wider, stacked
+340px layout. Images fill their slots with centered cropping; long headings
+are visually clamped while their complete link text remains accessible.
+
 ## Local validation
 
 Run `php -l functions.php`, `php -l inc/random-properties.php`, and
@@ -35,3 +41,5 @@ changing page styles or server-rendered markup.
 
 reCAPTCHA is not disabled for local testing: the existing domain error remains
 visible when the configured key does not authorize localhost.
+The Google response textarea is excluded from the form's input styling so its
+fallback UI keeps Google's native dimensions.

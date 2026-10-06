@@ -1,8 +1,15 @@
 .avillas-random-properties {
 	box-sizing: border-box;
-	width: min(1220px, calc(100% - 40px));
-	margin: 0 auto 48px;
-	padding: 24px;
+	position: relative;
+	display: grid;
+	grid-template-rows: 40px minmax(0, 1fr);
+	gap: 10px;
+	width: 60%;
+	max-width: 60%;
+	height: 250px;
+	max-height: 250px;
+	margin: 0 auto 32px;
+	padding: 14px 44px;
 	border: 1px solid #d8dee9;
 	border-radius: 10px;
 	background: #fff;
@@ -11,23 +18,25 @@
 }
 
 .avillas-random-properties__heading {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 16px;
-	margin-bottom: 20px;
+	min-width: 0;
+	align-self: center;
+	padding-right: 44px;
 }
 
 .avillas-random-properties__heading h2 {
 	margin: 0;
-	font-size: 24px;
-	line-height: 1.3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	font-size: 18px;
+	line-height: 1.1;
 }
 
 .avillas-random-properties__controls:not([hidden]) {
-	display: flex;
-	align-items: center;
-	gap: 12px;
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
 	white-space: nowrap;
 }
 
@@ -36,24 +45,57 @@
 }
 
 .avillas-random-properties__controls button {
-	width: 40px;
-	height: 40px;
+	position: absolute;
+	top: calc(50% + 20px);
+	transform: translateY(-50%);
+	width: 32px;
+	height: 36px;
+	padding: 0;
+	pointer-events: auto;
 	background: #b02d29 !important;
 	color: #fff !important;
 	font-size: 20px;
 }
 
+.avillas-random-properties__controls button[data-direction="-1"] {
+	left: 6px;
+}
+
+.avillas-random-properties__controls button[data-direction="1"] {
+	right: 6px;
+}
+
+.avillas-random-properties__counter {
+	position: absolute;
+	top: 24px;
+	right: 44px;
+	font-size: 12px;
+	line-height: 16px;
+}
+
 .avillas-random-properties__track {
 	display: flex;
+	min-height: 0;
+	min-width: 0;
 	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: none;
 	scroll-snap-type: x mandatory;
 	overscroll-behavior-x: contain;
+}
+
+.avillas-random-properties__track::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	height: 0;
 }
 
 .avillas-random-properties__card {
 	box-sizing: border-box;
 	flex: 0 0 100%;
 	min-width: 0;
+	min-height: 0;
+	height: 100%;
 	display: grid;
 	grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 	scroll-snap-align: start;
@@ -64,7 +106,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	aspect-ratio: 16 / 9;
+	min-width: 0;
+	min-height: 0;
+	height: 100%;
 	overflow: hidden;
 	background: #f4f6fa;
 }
@@ -73,17 +117,30 @@
 	position: static !important;
 	width: 100%;
 	height: 100%;
+	max-height: 100%;
 	object-fit: cover;
+	object-position: center;
 }
 
 .avillas-random-properties__details {
-	align-self: center;
-	padding: 24px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: minmax(0, 1fr) auto auto;
+	gap: 8px;
+	min-width: 0;
+	min-height: 0;
+	padding: 8px 12px;
 }
 
 .avillas-random-properties__details h3 {
-	font-size: 22px;
-	line-height: 1.4;
+	margin: 0;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	overflow-wrap: anywhere;
+	font-size: 17px;
+	line-height: 1.25;
 }
 
 .avillas-random-properties__details h3 a {
@@ -92,9 +149,16 @@
 
 .avillas-random-properties__price,
 .avillas-random-properties__link {
+	margin: 0;
 	color: #b02d29 !important;
-	font-size: 18px;
+	font-size: 15px;
+	line-height: 1.3;
 	font-weight: 700;
+}
+
+.avillas-random-properties__link {
+	font-size: 13px;
+	overflow-wrap: anywhere;
 }
 
 .avillas-random-properties a:focus-visible,
@@ -104,21 +168,36 @@
 	outline-offset: 3px;
 }
 
+@media (max-width: 979px) {
+	.avillas-random-properties {
+		width: calc(100% - 32px);
+		max-width: none;
+	}
+}
+
 @media (max-width: 600px) {
 	.avillas-random-properties {
 		width: calc(100% - 24px);
-		padding: 16px;
-	}
-	.avillas-random-properties__heading {
-		flex-wrap: wrap;
+		height: 340px;
+		max-height: none;
+		padding: 12px 40px;
 	}
 	.avillas-random-properties__heading h2 {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.avillas-random-properties__card {
 		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: 132px minmax(0, 1fr);
 	}
 	.avillas-random-properties__details {
-		padding: 16px 0;
+		gap: 6px;
+		padding: 10px 0 0;
+	}
+	.avillas-random-properties__details h3 {
+		-webkit-line-clamp: 2;
+		font-size: 15px;
+	}
+	.avillas-random-properties__counter {
+		right: 40px;
 	}
 }

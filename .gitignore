@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.tmp
+.env
+.env.*
+node_modules/
+vendor/
+wp-config.php
+*.sql

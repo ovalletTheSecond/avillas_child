@@ -1,0 +1,90 @@
+/*
+ Theme Name: AVILLAS
+ Theme URI: https://avillas.es
+ Description: Thème enfant personnalisé basé sur RealHomes
+ Author: Mina
+ Template: realhomes
+ Version: 1.0.0
+*/
+
+/* --- Début du style AVILLAS --- */
+
+/* Couleur principale AVILLAS */
+:root {
+    --avillas-primary: #1a3c6e; /* bleu foncé */
+    --avillas-secondary: #c9a86a; /* doré/beige */
+    --avillas-dark: #1a1a1a;
+    --avillas-light: #ffffff;
+}
+
+/* Boutons */
+.rh_btn, .btn, button, input[type="submit"] {
+    background-color: var(--avillas-primary) !important;
+    border-radius: 4px !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* Encadrements */
+.rh_form__item, .rh_prop_card, .rh_list_card {
+    border: 1px solid var(--avillas-secondary) !important;
+    border-radius: 6px !important;
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+    color: var(--avillas-primary) !important;
+}
+
+/* Liens */
+a {
+    color: var(--avillas-primary) !important;
+}
+
+/* Header */
+.rh_header {
+    background-color: var(--avillas-dark) !important;
+}
+
+/* Footer */
+.rh_footer {
+    background-color: var(--avillas-dark) !important;
+
+    color: #fff !important;
+}
+
+/* --- Fin du style AVILLAS --- */
+
+/* =========================================================
+   EFFET PARALLAX AVILLAS
+   ========================================================= */
+
+.avillas-parallax-section {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .avillas-parallax-section {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 1024px) {
+    .avillas-parallax-section {
+        background-attachment: scroll;
+    }
+}
+
+.avillas-parallax-section[data-parallax="true"] {
+    background-attachment: scroll;
+}
+

@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
+
+body.avillas-consultation-page {
+	--consultation-ink: #091426;
+	--consultation-muted: #526074;
+	--consultation-red: #b02d29;
+	--consultation-line: #d8dee9;
+	--consultation-surface: #ffffff;
+	--consultation-canvas: #f4f6fa;
+	background: var(--consultation-canvas);
+	color: var(--consultation-ink);
+	font-family: "Hanken Grotesk", "Avenir Next", sans-serif;
+	overflow-x: hidden;
+}
+
+body.avillas-consultation-page .page-head {
+	box-sizing: border-box;
+	position: relative;
+	isolation: isolate;
+	height: clamp(253.2px, calc(25.2vw + 25.2px), 337.2px) !important;
+	min-height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: var(--consultation-ink);
+	background-image:
+		linear-gradient(90deg, rgba(9, 20, 38, .86), rgba(9, 20, 38, .58) 56%, rgba(9, 20, 38, .32)),
+		var(--avillas-consultation-hero-image, url("../images/telephone-consultation-banner.png")) !important;
+	background-position: center, center 54%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.avillas-consultation-page .page-head::before {
+	position: absolute;
+	top: clamp(28px, 4vw, 48px);
+	left: max(24px, calc((100% - 1220px) / 2));
+	z-index: 1;
+	padding: 7px 12px;
+	border-left: 3px solid #ffb4ac;
+	background: rgba(255, 255, 255, .14);
+	color: #fff;
+	content: "CABINET CONSEIL FRANCO-ESPAGNOL";
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: .12em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+body.avillas-consultation-page .page-head::after {
+	position: absolute;
+	top: clamp(78px, 7vw, 94px);
+	left: max(24px, calc((100% - 1220px) / 2));
+	z-index: 1;
+	width: min(790px, calc(100% - 48px));
+	color: #fff;
+	content: "PRENDRE UN RENDEZ-VOUS\A TELEPHONIQUE";
+	font-family: "Manrope", "Hanken Grotesk", sans-serif;
+	font-size: clamp(30px, 4vw, 48px);
+	font-weight: 800;
+	letter-spacing: -.035em;
+	line-height: 1.06;
+	text-shadow: 0 3px 18px rgba(0, 0, 0, .22);
+	white-space: pre-line;
+}
+
+body.avillas-consultation-page .container.contents.single {
+	position: relative;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 240px;
+	align-items: start;
+	gap: 28px;
+	width: min(1220px, calc(100% - 40px)) !important;
+	max-width: 1220px !important;
+	margin: -32px auto 64px !important;
+	padding: 0;
+}
+
+body.avillas-consultation-page .container.contents.single > .row {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	width: 100%;
+	margin: 0;
+}
+
+body.avillas-consultation-page .container.contents.single > .row > .span12,
+body.avillas-consultation-page .container.contents.single .main {
+	float: none;
+	box-sizing: border-box;
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+body.avillas-consultation-page .container.contents.single::before,
+body.avillas-consultation-page .container.contents.single::after {
+	box-sizing: border-box;
+	display: block;
+	padding: 20px;
+	border: 1px solid var(--consultation-line);
+	box-shadow: 0 12px 34px rgba(9, 20, 38, .09);
+	font-family: "Hanken Grotesk", "Avenir Next", sans-serif;
+	font-size: 13px;
+	line-height: 1.65;
+	white-space: pre-line;
+}
+
+body.avillas-consultation-page .container.contents.single::before {
+	grid-column: 2;
+	grid-row: 1;
+	position: sticky;
+	top: 24px;
+	background: var(--consultation-ink);
+	color: #fff;
+	content: "BESOIN D'UN CONTACT IMMEDIAT ?\A\A Nos permanences telephoniques francophones vous accompagnent dans votre projet.\A\A CONSULTATION GRATUITE\A 20 a 30 minutes d'echange approfondi.";
+}
+
+body.avillas-consultation-page .container.contents.single::after {
+	grid-column: 2;
+	grid-row: 2;
+	background: #fff;
+	color: var(--consultation-ink);
+	content: "CABINET AVILLAS\A Conseillers juridiques & commerciaux\A\A 100% francophone\A Expertise bilingue\A\A Etude personnalisee\A Audit confidentiel sans frais\A\A Reponse sous 24h";
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+body.avillas-consultation-page .container.contents.single .main {
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+body.avillas-consultation-page .container.contents.single .post-content {
+	padding: 0;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt-eform-width-restrain,
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt-eform-content {
+	width: 100%;
+	max-width: none;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_main_heading_column {
+	display: none !important;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_container_head {
+	margin: 0 0 18px;
+	padding: 16px 18px;
+	border-left: 4px solid var(--consultation-red);
+	background: var(--consultation-canvas);
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_container_head h3,
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_container_head .ipt_uif_container_label {
+	color: var(--consultation-ink);
+	font-family: "Manrope", "Hanken Grotesk", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.45;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_container {
+	margin-bottom: 22px;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_question {
+	margin-bottom: 16px;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_container_col_half .ipt_fsqm_container_textinput .ipt_uif_question {
+	position: relative;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_container_col_half .ipt_fsqm_container_textinput .ipt_uif_question_label {
+	position: absolute;
+	top: -12px;
+	right: 0;
+	float: none;
+	width: auto;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_container_col_half .ipt_fsqm_container_textinput .ipt_uif_question_content {
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_question_title,
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_question_label,
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_label {
+	color: var(--consultation-ink);
+	font-family: "Hanken Grotesk", "Avenir Next", sans-serif;
+	font-weight: 600;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+body.avillas-consultation-page .ipt_fsqm_main_form select,
+body.avillas-consultation-page .ipt_fsqm_main_form textarea {
+	box-sizing: border-box;
+	min-height: 48px;
+	padding: 12px 14px !important;
+	border: 1px solid #cbd5e1 !important;
+	border-radius: 4px !important;
+	background: #fff !important;
+	box-shadow: none !important;
+	color: var(--consultation-ink) !important;
+	font-family: "Hanken Grotesk", "Avenir Next", sans-serif;
+	font-size: 15px;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form textarea {
+	min-height: 120px;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="submit"]):focus,
+body.avillas-consultation-page .ipt_fsqm_main_form select:focus,
+body.avillas-consultation-page .ipt_fsqm_main_form textarea:focus {
+	border-color: var(--consultation-red) !important;
+	outline: 2px solid rgba(176, 45, 41, .18);
+	outline-offset: 1px;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form input[type="checkbox"],
+body.avillas-consultation-page .ipt_fsqm_main_form input[type="radio"] {
+	accent-color: var(--consultation-red);
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_terms_wrap {
+	padding: 18px;
+	border: 1px solid var(--consultation-line);
+	background: var(--consultation-canvas);
+	color: var(--consultation-muted);
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_form_button_submit {
+	min-height: 54px;
+	padding: 14px 24px !important;
+	border: 1px solid var(--consultation-red) !important;
+	border-radius: 4px !important;
+	background: var(--consultation-red) !important;
+	box-shadow: 0 8px 20px rgba(176, 45, 41, .22);
+	color: #fff !important;
+	font-family: "Manrope", "Hanken Grotesk", sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: .03em;
+	text-transform: uppercase;
+	transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_form_button_submit:hover,
+body.avillas-consultation-page .ipt_fsqm_main_form .ipt_fsqm_form_button_submit:focus-visible {
+	transform: translateY(-1px);
+	background: #8e211f !important;
+	box-shadow: 0 10px 24px rgba(176, 45, 41, .28);
+}
+
+body.avillas-consultation-page .container.page-carousel {
+	box-sizing: border-box;
+	width: min(1220px, calc(100% - 40px)) !important;
+	max-width: 1220px !important;
+	margin: 0 auto 64px;
+	overflow: hidden;
+	padding: 28px;
+	border: 1px solid var(--consultation-line);
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(9, 20, 38, .06);
+}
+
+@media (max-width: 979px) {
+	body.avillas-consultation-page .container.contents.single {
+		display: block;
+		width: calc(100% - 32px) !important;
+		margin-top: -22px !important;
+	}
+
+	body.avillas-consultation-page .container.contents.single .post-content {
+		padding: 0;
+	}
+
+	body.avillas-consultation-page .container.contents.single::before,
+	body.avillas-consultation-page .container.contents.single::after {
+		position: static;
+		margin: 18px 0;
+	}
+}
+
+@media (max-width: 600px) {
+	body.avillas-consultation-page .page-head {
+		height: 241.2px !important;
+		min-height: 0;
+		background-position: center, 56% center;
+	}
+
+	body.avillas-consultation-page .page-head::before {
+		top: 24px;
+		left: 20px;
+		max-width: calc(100% - 40px);
+		font-size: 10px;
+	}
+
+	body.avillas-consultation-page .page-head::after {
+		top: 70px;
+		left: 20px;
+		width: calc(100% - 40px);
+		font-size: clamp(26px, 7vw, 34px);
+	}
+
+	body.avillas-consultation-page .container.contents.single {
+		width: calc(100% - 24px) !important;
+		margin-top: -17px !important;
+	}
+
+	body.avillas-consultation-page .ipt_fsqm_main_form {
+		padding: 0;
+	}
+
+	body.avillas-consultation-page .ipt_fsqm_main_form .ipt_uif_container_head {
+		padding: 13px;
+	}
+
+	body.avillas-consultation-page .container.page-carousel {
+		box-sizing: border-box;
+		width: calc(100% - 24px) !important;
+		margin-right: auto !important;
+		margin-left: auto !important;
+		overflow: hidden;
+		padding: 18px;
+	}
+}
+
+html[lang^="fr"] body.avillas-consultation-page .page-head::before {
+	content: "CABINET CONSEIL FRANCO-ESPAGNOL";
+}
+
+html[lang^="fr"] body.avillas-consultation-page .page-head::after {
+	content: "PRENDRE UN RENDEZ-VOUS\A T\00C9L\00C9PHONIQUE";
+}
+
+html[lang^="fr"] body.avillas-consultation-page .container.contents.single::before {
+	content: "BESOIN D'UN CONTACT IMM\00C9 DIAT ?\A\A Nos permanences t\00E9 l\00E9 phoniques francophones vous accompagnent dans votre projet.\A\A CONSULTATION GRATUITE\A 20-30 minutes d'\00E9 change approfondi.";
+}
+
+html[lang^="fr"] body.avillas-consultation-page .container.contents.single::after {
+	content: "CABINET AVILLAS\A Conseillers juridiques & commerciaux\A\A 100% francophone\A Expertise bilingue\A\A \00C9tude personnalis\00E9 e\A Audit confidentiel sans frais\A\A R\00E9ponse sous 24h";
+}
+
+html[lang^="en"] body.avillas-consultation-page .page-head::before {
+	content: "FRANCO-SPANISH BUSINESS ADVISORY";
+}
+
+html[lang^="en"] body.avillas-consultation-page .page-head::after {
+	content: "BOOK A PHONE\A CONSULTATION";
+}
+
+html[lang^="en"] body.avillas-consultation-page .container.contents.single::before {
+	content: "NEED IMMEDIATE HELP?\A\A Our French-speaking team can guide you through your project.\A\A FREE CONSULTATION\A 20 to 30 minutes of in-depth discussion.";
+}
+
+html[lang^="en"] body.avillas-consultation-page .container.contents.single::after {
+	content: "AVILLAS ADVISORY\A Legal & business consultants\A\A 100% French-speaking\A Bilingual expertise\A\A Personalized assessment\A Confidential, no-cost audit\A\A Reply within 24 hours";
+}
+
+html[lang^="es"] body.avillas-consultation-page .page-head::before {
+	content: "ASESORAMIENTO FRANCO-ESPA\00D1OL";
+}
+
+html[lang^="es"] body.avillas-consultation-page .page-head::after {
+	content: "RESERVA UNA CONSULTA\A TELEF\00D3NICA";
+}
+
+html[lang^="es"] body.avillas-consultation-page .container.contents.single::before {
+	content: "\00BFNECESITAS ATENCI\00D3N INMEDIATA?\A\A Nuestro equipo franc\00F3 fono te acompa\00F1 a en tu proyecto.\A\A CONSULTA GRATUITA\A 20-30 minutos de conversaci\00F3n en profundidad.";
+}
+
+html[lang^="es"] body.avillas-consultation-page .container.contents.single::after {
+	content: "ASESOR\00CD A AVILLAS\A Asesores jur\00ED dicos y comerciales\A\A 100% franc\00F3 fono\A Experiencia biling\00FC e\A\A Estudio personalizado\A Auditor\00ED a confidencial gratuita\A\A Respuesta en 24 h";
+}
+
+html[lang^="ca"] body.avillas-consultation-page .page-head::before {
+	content: "ASSESSORAMENT FRANCOESPANYOL";
+}
+
+html[lang^="ca"] body.avillas-consultation-page .page-head::after {
+	content: "DEMANA UNA CITA\A TELEF\00D2NICA";
+}
+
+html[lang^="ca"] body.avillas-consultation-page .container.contents.single::before {
+	content: "NECESSITES ATENCI\00D3\000020 IMMEDIATA?\A\A El nostre equip franc\00F2 fon t'acompanya en el teu projecte.\A\A CONSULTA GRATU\00CF TA\A 20-30 minuts de conversa en profunditat.";
+}
+
+html[lang^="ca"] body.avillas-consultation-page .container.contents.single::after {
+	content: "ASSESSORIA AVILLAS\A Assessors jur\00ED dics i comercials\A\A 100% franc\00F2 fon\A Experi\00E8ncia biling\00FC e\A\A Estudi personalitzat\A Auditoria confidencial sense cost\A\A Resposta en 24 h";
+}
+
+body.avillas-consultation-page .ipt-uif-custom-material-custom .input-field .prefix ~ label {
+	margin-left: 5em;
+}

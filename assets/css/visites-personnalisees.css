@@ -1,0 +1,70 @@
+body.page-id-7951 .page-head::after,
+html[lang^="fr"] body.page-id-7951 .page-head::after {
+	content: "R\00C9SERVEZ VOS VISITES\A PERSONNALIS\00C9 ES";
+}
+
+body.page-id-7951 .container.contents.single::before,
+html[lang^="fr"] body.page-id-7951 .container.contents.single::before {
+	content: "VISITEZ AVEC AVILLAS\A\A D\00E9 couvrez les commerces avec un conseiller francophone.\A\A UN PARCOURS SUR MESURE\A Pr\00E9 parez vos visites selon votre projet.";
+}
+
+body.page-id-7951 .container.contents.single::after,
+html[lang^="fr"] body.page-id-7951 .container.contents.single::after {
+	content: "VOTRE PROJET EN ESPAGNE\A\A Accompagnement bilingue\A Visites personnalis\00E9 es\A\A Indiquez vos disponibilit\00E9 s et vos crit\00E8 res dans le formulaire.";
+}
+
+html[lang^="en"] body.page-id-7951 .page-head::after {
+	content: "BOOK YOUR\A PERSONALIZED VISITS";
+}
+html[lang^="en"] body.page-id-7951 .container.contents.single::before {
+	content: "VISIT WITH AVILLAS\A\A Explore businesses with a French-speaking advisor.\A\A A TAILORED ITINERARY\A Plan your visits around your project.";
+}
+html[lang^="en"] body.page-id-7951 .container.contents.single::after {
+	content: "YOUR PROJECT IN SPAIN\A\A Bilingual support\A Personalized visits\A\A Share your availability and requirements in the form.";
+}
+
+html[lang^="es"] body.page-id-7951 .page-head::after {
+	content: "RESERVA TUS VISITAS\A PERSONALIZADAS";
+}
+html[lang^="es"] body.page-id-7951 .container.contents.single::before {
+	content: "VISITA CON AVILLAS\A\A Descubre negocios con un asesor franc\00F3 fono.\A\A UN RECORRIDO A MEDIDA\A Organiza las visitas seg\00FA n tu proyecto.";
+}
+html[lang^="es"] body.page-id-7951 .container.contents.single::after {
+	content: "TU PROYECTO EN ESPA\00D1 A\A\A Acompa\00F1 amiento biling\00FC e\A Visitas personalizadas\A\A Indica tu disponibilidad y tus criterios en el formulario.";
+}
+
+html[lang^="ca"] body.page-id-7951 .page-head::after {
+	content: "RESERVA LES TEVES\A VISITES PERSONALITZADES";
+}
+html[lang^="ca"] body.page-id-7951 .container.contents.single::before {
+	content: "VISITA AMB AVILLAS\A\A Descobreix negocis amb un assessor franc\00F2 fon.\A\A UN RECORREGUT A MIDA\A Organitza les visites segons el teu projecte.";
+}
+html[lang^="ca"] body.page-id-7951 .container.contents.single::after {
+	content: "EL TEU PROJECTE A ESPANYA\A\A Acompanyament biling\00FC e\A Visites personalitzades\A\A Indica la disponibilitat i els criteris al formulari.";
+}
+
+body.page-id-7951 .post-content .wpb_single_image {
+	display: none;
+}
+
+body.page-id-7951 .page-head > .container,
+body.page-id-7951 .main > article > .post-header,
+body.page-id-7951 .main .page-title,
+body.page-id-7951 .post-content .vc_row:has(.wpb_single_image) {
+	display: none;
+}
+
+body.page-id-7951 .post-content .wpb_content_element,
+body.page-id-7951 .post-content .vc_row {
+	margin-bottom: 0;
+}
+
+body.page-id-7951 .post-content blockquote {
+	margin: 0 0 20px;
+	padding: 16px 20px;
+	border-left: 4px solid var(--consultation-red);
+	background: var(--consultation-surface);
+	color: var(--consultation-ink);
+	font-family: "Manrope", "Hanken Grotesk", sans-serif;
+	font-size: 20px;
+}

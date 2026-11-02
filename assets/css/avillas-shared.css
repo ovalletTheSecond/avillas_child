@@ -1729,11 +1729,13 @@ body.single-property #overview .property-item .wrap:where(html:has(> body.single
 
 	body.single-property #overview .property-item .wrap:where(html:has(> body.single-property), body.single-property, body.single-property *) { display: flex; flex-direction: column; }
 
-	body.single-property #overview .property-item .wrap:where(html:has(> body.single-property), body.single-property, body.single-property *)::before {
-	content: "Bar Glacier Cafétéria 200 m² - Face Mer";
+	body.single-property #overview .property-item .wrap > h1.property-title:where(html:has(> body.single-property), body.single-property, body.single-property *) {
 	display: block;
 	order: 1;
 	margin: 0 0 16px;
+	padding: 0;
+	border: 0;
+	background: transparent;
 	color: #0f172a;
 	font-size: 26px;
 	font-weight: 800;
